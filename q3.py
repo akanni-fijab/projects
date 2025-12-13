@@ -1,12 +1,12 @@
-get_extension = input("File name: ")
-file_name, *extension = get_extension.split(".")
-print(file_name)
-print(extension)
+get_extension = input("File name: ").lower().strip()
+*file_name, extension = get_extension.split(".") #change what is not being compares to a list
+# print(file_name)
+# print(extension)
 
-#I'm guessing the * just creates a list
-print(type(extension))
+# #I'm guessing the * just creates a list
+# print(type(extension))
 
-match extension[0]:
+match extension:
     case "gif":
         print("image/gif")
     case "jpeg" | "jpg":
