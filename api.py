@@ -5,6 +5,7 @@ def main():
     page = 1
     limit = 100
     querry = input("Enter an artist: ")
+    #Gives us artworks by a particular artist
 
     url = f"https://api.artic.edu/api/v1/artworks/search?page={page}&limit={limit}"
     # header = {"User-Agent": "Mozzila/5.0"}
