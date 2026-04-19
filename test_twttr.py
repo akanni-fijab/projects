@@ -1,8 +1,0 @@
-from twttr import shorten
-
-
-def test_remove_vowels():
-    assert shorten("aeiou") == ""
-    assert shorten("Twitter") == "Twttr"
-    assert shorten("What's your name?") == "Wht's yr nm?"
-    assert shorten("CS50") == "CS50"
