@@ -5,14 +5,34 @@
 #
 #
 #
-names = []
-with open("names.txt", "r") as file:
-    for line in file:
-        names.append(line)
-        # print(f"hello, {line.rstrip()} ")
-#     lines = file.readlines()
-#
-for name in sorted(names):
-    print(name.rstrip())
+# names = []
+# with open("names.txt", "r") as file:
+#     for line in file:
+#         names.append(line)
+#         # print(f"hello, {line.rstrip()} ")
+# #     lines = file.readlines()
+# #
+# for name in sorted(names):
+#     print(name.rstrip())
 # for line in lines:
 #     print(line.rstrip())
+#
+
+# for _ in range(4):
+#     name = input("Name, Abeg? ")
+
+# with open("students.csv") as file:
+#     for line in file:
+#         name, house = line.rstrip().split(",")
+#         print(f"{name} is in {house}")
+#
+students = []
+with open("students.csv") as file:
+    for line in file:
+        name, house = line.rstrip().split(",")
+        student = {}
+        student["name"] = name
+        student["house"] = house
+        students.append(student)
+for stud in students:
+    print(f" {student['name']} is in {student['house']}")
