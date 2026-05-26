@@ -1,11 +1,21 @@
 students = []
+
 with open("students.csv") as file:
     for line in file:
         name, house = line.rstrip().split(",")
 
-        student = {"name": name, "house": house}
+        student = {
+            "name": name,
+            "house": house,
+        }  # each entry in the list is a dict of name anf house
         students.append(student)
-for student in students:
+
+
+def get_name(student):
+    return student["name"]
+
+
+for student in sorted(students, key=lambda student: student["name"]):
     print(f" {student['name']} is in {student['house']}")
 
 
