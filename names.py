@@ -18,7 +18,6 @@ def get_name(student):
 for student in sorted(students, key=lambda student: student["name"]):
     print(f" {student['name']} is in {student['house']}")
 
-
 # Code below for file creation and appending
 # name = input("Name, Abeg? ")
 # with open("names.txt", "a") as file:
