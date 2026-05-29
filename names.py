@@ -2,11 +2,12 @@ students = []
 
 with open("students.csv") as file:
     for line in file:
-        name, house = line.rstrip().split(",")
+        name, house, home = line.rstrip().split(",")
 
         student = {
             "name": name,
             "house": house,
+            "home": home,
         }  # each entry in the list is a dict of name anf house
         students.append(student)
 
@@ -16,7 +17,9 @@ def get_name(student):
 
 
 for student in sorted(students, key=lambda student: student["name"]):
-    print(f" {student['name']} is in {student['house']}")
+    print(
+        f" {student['name']} is in {student['house']} and grew up in {student['home']}"
+    )
 
 # Code below for file creation and appending
 # name = input("Name, Abeg? ")
