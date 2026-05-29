@@ -6,7 +6,11 @@ with open("students.csv") as file:
     reader = csv.DictReader(file)
     for row in reader:
         students.append(
-            {"name": row["name"], "house": row["house"], "home": row["home"]}
+            {
+                "name": row["name"],
+                "house": row["house"],
+                "home": row["home"],
+            }  # a hint i guess
         )
 
 
