@@ -1,19 +1,13 @@
-students = []
+import csv
+
+students = []  # list of dicts
 
 with open("students.csv") as file:
-    for line in file:
-        name, house, home = line.rstrip().split(",")
-
-        student = {
-            "name": name,
-            "house": house,
-            "home": home,
-        }  # each entry in the list is a dict of name anf house
-        students.append(student)
-
-
-def get_name(student):
-    return student["name"]
+    reader = csv.DictReader(file)
+    for row in reader:
+        students.append(
+            {"name": row["name"], "house": row["house"], "home": row["home"]}
+        )
 
 
 for student in sorted(students, key=lambda student: student["name"]):
